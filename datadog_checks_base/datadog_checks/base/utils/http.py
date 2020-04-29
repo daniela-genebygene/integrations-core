@@ -5,9 +5,10 @@ import logging
 import os
 from contextlib import contextmanager
 from ipaddress import ip_address, ip_network
+from typing import Dict, Any
 
 import requests
-from requests import auth as requests_auth
+from requests import auth as requests_auth, Response
 from requests_toolbelt.adapters import host_header_ssl
 from six import iteritems, string_types
 from six.moves.urllib.parse import urlparse
@@ -280,21 +281,27 @@ class RequestsWrapper(object):
             self.request_hooks.append(lambda: handle_kerberos_cache(config['kerberos_cache']))
 
     def get(self, url, **options):
+        # type: (str, Dict[Any]) -> Response
         return self._request('get', url, options)
 
     def post(self, url, **options):
+        # type: (str, Dict[Any]) -> Response
         return self._request('post', url, options)
 
     def head(self, url, **options):
+        # type: (str, Dict[Any]) -> Response
         return self._request('head', url, options)
 
     def put(self, url, **options):
+        # type: (str, Dict[Any]) -> Response
         return self._request('put', url, options)
 
     def patch(self, url, **options):
+        # type: (str, Dict[Any]) -> Response
         return self._request('patch', url, options)
 
     def delete(self, url, **options):
+        # type: (str, Dict[Any]) -> Response
         return self._request('delete', url, options)
 
     def _request(self, method, url, options):

@@ -1,0 +1,8 @@
+<cts:near-query distance="10" xmlns:cts="http://marklogic.com/cts">
+  <cts:word-query>
+    <cts:text xml:lang="en">Yorick</cts:text>
+  </cts:word-query>
+  <cts:word-query>
+    <cts:text xml:lang="en">Horatio</cts:text>
+  </cts:word-query>
+</cts:near-query>

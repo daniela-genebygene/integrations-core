@@ -1,0 +1,31 @@
+name: MarkLogic
+files:
+- name: marklogic.yaml
+  options:
+  - template: init_config
+    options:
+    - template: init_config/default
+  - template: instances
+    options:
+    - template: instances/default
+
+
+## Metrics to collect flags by object types
+#- hosts
+#- forests
+#- servers
+#- databases
+#- groups
+
+## Summary
+#- cluster
+#- hosts
+#- servers
+#- forests
+
+## Filters/Specific object
+#- hosts
+#- forests
+#- servers
+#- databases
+#- groups
