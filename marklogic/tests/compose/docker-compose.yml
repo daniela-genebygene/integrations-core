@@ -10,7 +10,7 @@ services:
     environment:
       - MARKLOGIC_INIT=true
       - MARKLOGIC_ADMIN_USERNAME=admin
-      - MARKLOGIC_ADMIN_PASSWORD=passw0rd
+      - MARKLOGIC_ADMIN_PASSWORD=admin
 
 #
 #
