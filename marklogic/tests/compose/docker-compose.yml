@@ -1,6 +1,7 @@
 version: '3'
 services:
-  gitlab:
+  marklogic:
+    container_name: marklogic
     image: store/marklogicdb/marklogic-server:9.0-12-dev-centos
     ports:
       - 8000:8000
