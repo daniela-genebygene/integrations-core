@@ -11,7 +11,7 @@ HOST = get_docker_hostname()
 PORT = 8002
 API_URL = "http://{}:{}".format(HOST, PORT)
 USERNAME = 'admin'
-PASSWORD = 'passw0rd'
+PASSWORD = 'admin'
 
 CHECK_CONFIG = {
     'init_config': {},
